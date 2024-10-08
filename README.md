@@ -1,6 +1,6 @@
 # HTML SVG Animation
 ## Demo
-(https://ibb.co/GnzrbKC/IMG-241008-232008)
+(https://ibb.co/GnzrbKC/IMG-241008-232008.jpg)
  
 This project is a simple HTML page showcasing an SVG animation of a logo badge and text, styled to mimic a dynamic outline drawing effect. The animation is triggered upon hovering over the SVG elements and brings the logo elements into full color and opacity with smooth transitions.
 
