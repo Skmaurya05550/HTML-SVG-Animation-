@@ -1,1 +1,117 @@
+body {
+    background-color: black;
+}
 
+svg {
+  width: 100%;
+}
+
+path {
+  stroke-dasharray: 1150;
+  stroke-dashoffset: 1000;
+  animation: draw 3s ease forwards;
+}
+
+@keyframes draw {
+   0% {
+        //stroke-dashoffset: inherit from class
+        fill-opacity: 0;
+    }
+    85%, 90% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill-opacity: 1;
+  }
+}
+
+#logo-badge .path {
+  stroke-width: 2;
+}
+
+#logo-badge .path:hover {
+  fill: #f16529;
+  stroke: #f16529;
+  stroke-width: 2;
+  transition: fill 1s ease-in-out;
+}
+
+#logo-text-html path,
+#logo-text-games path {
+  stroke-width: 2;
+}
+
+#logo-text-html path:hover,
+#logo-text-games path:hover {
+  fill: #555;
+  stroke: #000;
+  transition: fill 1s ease-in-out;
+}
+
+svg:hover .path {
+  animation: draw 1.5s ease forwards;
+}*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@keyframes svg_outline {
+  0% {
+    fill-opacity: 0;
+  }
+  85%, 90% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+svg #logo-badge {
+  stroke-dasharray: 1132;
+  stroke-dashoffset: 1132;
+  animation: svg_outline 1.5s linear;
+}
+
+svg #logo-text-html, svg #logo-text-games {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: svg_outline 2.5s linear;
+}@keyframes svg_outline {
+  0% {
+    fill-opacity: 0;
+  }
+  85%, 90% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+svg #logo-badge {
+  stroke-dasharray: 1132;
+  stroke-dashoffset: 1132;
+  animation: svg_outline 2.5s linear;
+}
+
+svg #logo-text-html, svg #logo-text-games {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: svg_outline 2.5s linear;
+  @include animate(svg_outline, 2.5s, 0, linear);
+                //@include animate(glow, 1s, 5s, ease-in-out, infinite, alternate);
+}
+
+#logo-badge {
+                stroke-dasharray: 1132;
+                stroke-dashoffset: 1132;
+                @include animate(svg_outline, 2.5s, 0, linear);
+                //@include animate(glow, 1s, 5s, ease-in-out, infinite, alternate
